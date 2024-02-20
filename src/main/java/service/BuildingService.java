@@ -2,7 +2,7 @@ package service;
 
 import entity.Building;
 import entity.House;
-import entity.Summery;
+import entity.SummerHouse;
 import entity.Villa;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class BuildingService {
     public double getTotalPriceOfSummerHouses() {
         double totalPrice = 0;
         for (Building building : buildings) {
-            if (building instanceof Summery) {
+            if (building instanceof SummerHouse) {
                 totalPrice += building.getPrice();
             }
         }
@@ -81,7 +81,7 @@ public class BuildingService {
         double totalSquareMeters = 0;
         int summerHouseCount = 0;
         for (Building building : buildings) {
-            if (building instanceof Summery) {
+            if (building instanceof SummerHouse) {
                 totalSquareMeters += building.getSquareMeters();
                 summerHouseCount++;
             }
